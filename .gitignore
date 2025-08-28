@@ -1,0 +1,41 @@
+# Node dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Build outputs
+/.next
+/out
+/dist
+/build
+
+# Local env files
+.env.local
+.env.*.local
+!.env.example
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Mac / IDE
+.DS_Store
+*.swp
+*.swo
+.idea
+.vscode
+*.iml
+
+# Prisma
+prisma/migrations
+
+# Turborepo / monorepo
+/.turbo
+/.turbo-checksums
+
+# Optional
+*.log
+*.tmp
+*.bak
