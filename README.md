@@ -12,3 +12,15 @@ Error: Command pnpm install exited with 1
 ```
 
 and in order to fix this, go to Vercel Dashboard > Settings > Build and Deployment > Framework Setting > Install Command > override it then replace pnpm install to npm isntall only.
+
+- being on commit [fb54d2c](https://github.com/deeptux/connex/commit/fb54d2c122cf12d200875ed30df0d48d277f50e6), deploying the project on vercel produces error like this:
+
+```bash
+    : `---- Rename `pipeline` field to `tasks`
+ 16 |     }
+    `----
+  help: Changed in 2.0: `pipeline` has been renamed to `tasks`.
+Error: Command "turbo run build" exited with 1
+```
+
+and in order to fix this, go to turbo.json file and change the "pipeline" key to "tasks"
