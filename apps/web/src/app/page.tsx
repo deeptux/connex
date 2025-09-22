@@ -1,7 +1,7 @@
 import Image from "next/image";
-import styles from "./styles/home.module.css";
+import styles from "./styles/maintenance.module.css";
 
-export default function Home() {
+export default function Maintenance() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
