@@ -1,0 +1,97 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* 👈 centers horizontally */
+  justify-content: center; /* 👈 centers vertically */
+  min-height: 60vh;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo {
+    filter: invert(1); /* inverts only when dark mode is active */
+  }
+}
+
+/* ☀️ Light mode (optional, just resets if needed) */
+@media (prefers-color-scheme: light) {
+  .logo {
+    filter: none;
+  }
+}
+
+.brandRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+  justify-content: center; /* 👈 keep centered */
+}
+
+.tagline {
+  margin: 0;
+  margin-left: -15px; /* 👈 restored from inline */
+  text-align: left;
+  white-space: nowrap;
+  font-size: 1rem;
+}
+
+.comingSoon {
+  color: #bfa100;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.footerLink {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.footerIcon {
+  filter: invert(80%) sepia(98%) saturate(1176%) hue-rotate(7deg) brightness(105%);
+  /* 👆 restored color inversion */
+}
+
+/* 📱 Mobile adjustments */
+@media (max-width: 600px) {
+  .brandRow {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .tagline {
+    white-space: normal;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-left: 0; /* remove negative margin on mobile */
+  }
+
+  .comingSoon {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+}
